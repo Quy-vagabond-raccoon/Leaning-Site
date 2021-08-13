@@ -1,0 +1,384 @@
+/*............................................*/
+/*..............DEFAULT.......................*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  color: #5a5a5a;
+  background-color: #ffffff;
+  text-rendering: optimizeLegibility;
+}
+body {
+  overflow-x: hidden;
+}
+/*..........................................*/
+/*................REUSABLE..................*/
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h1 {
+  font-size: 250%;
+  font-weight: 400;
+
+  word-spacing: 5px;
+  color: white;
+  line-height: 135%;
+  margin-bottom: 50px;
+}
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: #e68f2d;
+  padding: 15px 30px;
+  border-radius: 20px;
+  margin: 0 5px;
+  width: 190px;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s;
+}
+.btn:hover,
+.btn:active {
+  background-color: #dba464;
+}
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+h2 {
+  color: #e67e22;
+  font-size: 180%;
+  font-weight: 700;
+  text-align: center;
+}
+h2:after {
+  content: " ";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: #e2ae80;
+  margin: 0 auto;
+}
+h3 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #265077;
+  color: white;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  margin-bottom: 15px;
+}
+.p-long {
+  text-align: center;
+  color: #265077;
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 70%;
+  margin-left: 15%;
+  line-height: 140%;
+}
+section {
+  padding: 50px;
+}
+.small-icon {
+  color: #586e85;
+  font-size: 130%;
+  margin-right: 10px;
+}
+/*..........................................*/
+/*...............HEADER.....................*/
+header {
+  background-image: linear-gradient(
+      60deg,
+      rgba(194, 199, 206, 0.85),
+      rgba(65, 121, 243, 0.8)
+    ),
+    url("../img/photo4.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.logo {
+  width: 250px;
+  float: left;
+  margin-left: 70px;
+  margin-top: -50px;
+  margin-bottom: -100px;
+}
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-right: 50px;
+  margin-top: 55px;
+}
+.main-nav li a {
+  text-decoration: none;
+  color: white;
+  font-size: 110%;
+  font-weight: 700;
+  transition: border-bottom 0.5s;
+  padding: 3px 0;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 5px solid #cccccc;
+}
+.main-nav li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.heading-main-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -55%);
+  width: 1140px;
+}
+/*..............STICKY NAV............*/
+.sticky {
+  background-color: rgba(27, 90, 226, 0.8);
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.sticky .logo {
+  width: 250px;
+  margin-top: -40px;
+  margin-bottom: -70px;
+}
+.sticky .main-nav {
+  margin-top: 30px;
+}
+/*............MOBILE NAV................*/
+.mobile-nav-icon {
+  font-size: 200%;
+  color: rgb(15, 176, 240);
+  position: absolute;
+  top: 55px;
+  right: 100px;
+}
+.sticky .mobile-nav-icon {
+  top: 30px;
+}
+/*.......................................*/
+/*..............ABOUT SECTION............*/
+.about-picture {
+  position: relative;
+  margin-top: 50px;
+}
+.about-picture img {
+  width: 90%;
+  border-radius: 20px;
+  border: 4px solid #aab1dd;
+  box-shadow: 0px 5px 15px 5px #3d5ef3;
+  transition: all 0.5s;
+  /* 
+} */
+}
+.picture-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #060713;
+  transform: translate(-65%, -100%);
+  font-weight: 800;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.about-picture:hover img,
+.about-picture:active img {
+  filter: brightness(55%) blur(2px);
+}
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title {
+  transform: translate(-65%, -50%);
+  opacity: 1;
+}
+/*.......................................*/
+/*..............CLASSES SECTION............*/
+.product-section {
+  background-color: #f4f4f4;
+}
+.product-section h2 {
+  margin-bottom: 60px;
+}
+.product-box {
+  background-color: #eeefff;
+  box-shadow: 3px 5px 10px #e0e0e0;
+  width: 90%;
+  height: 350px;
+}
+.product-price {
+  color: #265077;
+  font-size: 250%;
+  font-weight: 300;
+  text-align: center;
+}
+.product-price span {
+  font-size: 80%;
+}
+.product-box ul li {
+  margin-left: 20%;
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.product-box .btn {
+  margin-left: 20%;
+}
+/*.......................................*/
+/*..............TESTIMONIAL SECTION............*/
+.testimonial-section {
+  background-image: linear-gradient(
+      60deg,
+      rgba(65, 121, 243, 0.8),
+      rgba(134, 149, 168, 0.85)
+    ),
+    url("../img/photo2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.testimonial-section h2 {
+  margin-bottom: 70px;
+}
+blockquote {
+  width: 95%;
+  position: relative;
+  font-style: italic;
+  line-height: 140%;
+  color: rgb(255, 255, 255);
+}
+blockquote:before {
+  content: "\201C ";
+  display: block;
+  font-size: 400%;
+  position: absolute;
+  top: -10;
+  left: -10px;
+}
+cite {
+  display: block;
+  color: rgba(5, 21, 44, 0.85);
+  margin-top: 25px;
+}
+cite img {
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid #265077;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+/*.......................................*/
+/*..............CONTACT SECTION............*/
+.contact-section {
+  background-color: #f4f4f4;
+}
+/*.......................................*/
+/*..............FOOTER SECTION............*/
+footer {
+  text-align: center;
+  background-color: rgba(101, 103, 105, 0.85);
+  color: white;
+  padding: 10px;
+}
+.information {
+  list-style: none;
+  line-height: 200%;
+  margin-top: 70px;
+  word-spacing: 1px;
+  font-size: 95%;
+}
+.information .small-icon {
+  color: #265077;
+}
+.information .small-icon:hover,
+.information .small-icon:active {
+  transform: scale(1.3);
+}
+.social-icon {
+  margin-top: 50px;
+  list-style: none;
+}
+.social-icon li {
+  display: inline-block;
+  font-size: 250%;
+  margin-left: 20px;
+  color: #265077;
+  transition: all 0.3s;
+}
+.social-icon li i {
+  transition: all 0.3s;
+}
+.social-icon li i:hover,
+.social-icon li i:active {
+  transform: scale(1.3);
+  color: rgba(115, 175, 243, 0.85);
+}
+/*.......................................*/
+/*..............FORM SECTION............*/
+form {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-left: 40%;
+  width: 60%;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+form .row {
+  margin-bottom: 10px;
+}
+label {
+  font-size: 120%;
+}
+input,
+textarea {
+  outline: none;
+  padding: 10px;
+  border: 1px solid #f4f4f4;
+  margin-left: 30px;
+  cursor: pointer;
+}
+textarea {
+  resize: none;
+  height: 100px;
+}
+input {
+  height: 50px;
+}
+input [type="text"],
+input[type="email"],
+textarea {
+  width: 80%;
+  font-size: 80%;
+}
+
+form .row:last-child {
+  text-align: center;
+}
+input[type="submit"] {
+  font-weight: 700;
+  font-size: 90%;
+  border-radius: 10px;
+  width: 40%;
+}
